@@ -1,0 +1,130 @@
+/* GamePage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Jokerman&display=swap'); /* Import Jokerman font */
+
+.game-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes whirl {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Background spinning animation */
+.whirly-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('back.jpg'); /* Funky pattern background */
+    background-size: cover;
+    animation: spin 3s linear infinite; /* Spinning background */
+    z-index: +1; /* Place the background behind other content */
+    
+
+}
+
+/* Additional styles */
+.question-number {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff5722, #ffeb3b); /* Gradient background */
+    color: #ffffff;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    border: 5px solid #ffffff; /* White border */
+    animation: wobble 1s infinite, nausea 1s infinite; /* Wobble and nausea animations */
+    z-index: 2;
+}
+
+.question {
+    font-size: 4rem;
+    color: #ffeb3b;
+    margin: 2rem 0; /* Reduce top and bottom margin to move it higher */
+    font-family: 'Jokerman', cursive;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); /* Enhanced text shadow */
+    background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+    padding: 2rem 3rem; /* Increased padding */
+    border-radius: 25px; /* More rounded corners */
+    border: 4px dashed #ff5722; /* Dashed border */
+    display: inline-block; /* Ensure background wraps text */
+    transform: skew(-10deg); /* More skewed text for a quirky look */
+    animation: shake 1s infinite, neon-flicker 1.5s infinite; /* Shake and neon flicker animations */
+    position: relative; /* Change positioning to relative */
+    top: -5rem; /* Move the question higher */
+    z-index: 2;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem; /* Increased gap */
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    bottom: 3rem;
+    padding: 0 2rem;
+    z-index: 2;
+}
+
+.option-button {
+    padding: 3rem;
+    font-size: 2.5rem;
+    width: 100%;
+    border: 3px solid #ff5722; /* Thicker border around buttons */
+    border-radius: 30px; /* More rounded corners */
+    background: radial-gradient(circle, #7e1f1f, #ce3202); /* Radial gradient background */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Jokerman', cursive;
+    animation: wobble 1s infinite; /* Wobble animation */
+}
+
+.option-button:hover {
+    background: radial-gradient(circle, #ff5722, #ffeb3b); /* Inverted gradient background on hover */
+    color: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+.option-button:active {
+    background: radial-gradient(circle, #e64a19, #fbc02d); /* Different radial gradient background on click */
+    transform: translateY(3px);
+}
+
+.quirky-element {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 4rem;
+    color: #ffeb3b;
+    font-family: 'Jokerman', cursive;
+    transform: rotate(-10deg);
+    z-index: 10;
+    cursor: pointer;
+    animation: wobble 1s infinite, nausea 2s infinite; /* Wobble and nausea animations */
+}

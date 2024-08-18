@@ -1,0 +1,72 @@
+@import url('https://fonts.cdnfonts.com/css/jokerman');
+
+.homepage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 1rem;    
+    background: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.title{
+    font-size: 8rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: #ff6f61;
+    font-family: 'Jokerman', cursive;
+    text-shadow: 4px 4px #ffdd67;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.title span{
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-300px);
+    animation: drop 0.5s forwards ease-in-out;
+}
+
+@keyframes drop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button-group{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-button{
+    padding: 1rem 4rem;
+    font-size: 1.5rem;
+    border: 3px solid #ff6f61;
+    border-radius: 12px;
+    background-color: #ffdd67;
+    color: black;
+    font-family: 'Jokerman';
+    cursor: pointer;
+    transition: background-color 0.3s transform 0.2s;
+    box-shadow: 4px 4px 0px #ff6f61;
+}
+
+.menu-button:hover{
+    background-color: #ff6f61;
+    color: #ffdd67;
+    transform: translateY(-4px);
+}
+
+.menu-button:active {
+    background-color: #d1554f;
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0px #ff6f61;
+}
+

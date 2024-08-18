@@ -1,0 +1,51 @@
+/* FinalPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Jokerman&display=swap'); /* Import Jokerman font */
+
+.final-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff4081, #ffeb3b); /* Gradient background */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure elements don't overflow */
+    animation: bgAnimation 30s infinite linear; /* Animated background */
+}
+
+@keyframes bgAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 60px #ffeb3b, 0 0 70px #ffeb3b; }
+    50% { text-shadow: 0 0 15px #ffeb3b, 0 0 30px #ffeb3b, 0 0 45px #ffeb3b, 0 0 60px #ffeb3b, 0 0 75px #ffeb3b, 0 0 90px #ffeb3b, 0 0 105px #ffeb3b; }
+    100% { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 60px #ffeb3b, 0 0 70px #ffeb3b; }
+}
+
+.final-message {
+    font-size: 6rem;
+    color: #fff;
+    font-family: 'Jokerman', cursive;
+    text-shadow: 0 0 15px #ffeb3b, 0 0 30px #ffeb3b, 0 0 45px #ffeb3b; /* Glowing effect */
+    animation: pulse 2s infinite, glow 2s infinite; /* Pulse and glow animations */
+    margin: 0;
+}
+
+.final-submessage {
+    font-size: 3rem;
+    color: #ffeb3b;
+    font-family: 'Jokerman', cursive;
+    text-shadow: 0 0 10px #ff5722, 0 0 20px #ff5722, 0 0 30px #ff5722; /* Glowing effect */
+    margin-top: 2rem;
+}
+
